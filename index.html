@@ -1,12 +1,24 @@
 <html>
 <head>
 <script>
-setTimeout(function(){
-window.top.location="ifood://restaurant/415eaecd-62f5-4b88-92f9-d95068fcac80";
-},1000);
+var appLink = "ifood://restaurant/415eaecd-62f5-4b88-92f9-d95068fcac80";
+var webLink = "https://www.ifood.com.br/delivery/joinville-sc/mineirice---pao-de-queijo-recheado-espinheiros/415eaecd-62f5-4b88-92f9-d95068fcac80";
+
+window.onload = function(){
+
+  // tenta abrir o app
+  window.location = appLink;
+
+  // se não abrir em 2 segundos, vai para o site
+  setTimeout(function(){
+    window.location = webLink;
+  },2000);
+
+}
 </script>
 </head>
+
 <body>
-Conectando ao melhor restaurante...
+Abrindo o iFood...
 </body>
 </html>
